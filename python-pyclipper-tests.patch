@@ -1,0 +1,22 @@
+--- pyclipper-1.3.0.post2/tests/test_pyclipper.py.orig	2021-12-01 15:37:19.000000000 +0100
++++ pyclipper-1.3.0.post2/tests/test_pyclipper.py	2021-12-18 18:11:39.197462627 +0100
+@@ -12,8 +12,10 @@ import sys
+ 
+ if sys.version_info < (3,):
+     integer_types = (int, long)
++    u_type = unicode
+ else:
+     integer_types = (int,)
++    u_type = str
+ 
+ import pyclipper
+ 
+@@ -381,7 +383,7 @@ class TestNonStandardNumbers(TestCase):
+ class TestPackageVersion(TestCase):
+     def test__version__(self):
+         assert hasattr(pyclipper, "__version__")
+-        assert isinstance(pyclipper.__version__, str)
++        assert isinstance(pyclipper.__version__, u_type)
+ 
+ 
+ def _do_solutions_match(paths_1, paths_2, factor=None):
