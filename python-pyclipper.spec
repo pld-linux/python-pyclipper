@@ -7,13 +7,13 @@
 Summary:	Cython wrapper for Clipper library
 Summary(pl.UTF-8):	Cythonowe obudowanie biblioteki Clipper
 Name:		python-pyclipper
-Version:	1.3.0.post2
-Release:	5
+Version:	1.3.0.post6
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pyclipper/
 Source0:	https://files.pythonhosted.org/packages/source/p/pyclipper/pyclipper-%{version}.tar.gz
-# Source0-md5:	ac53748592d18d8c8b63b5bd65a2ab28
+# Source0-md5:	c227d62d245158070221ecc4bb452036
 Patch0:		%{name}-tests.patch
 URL:		https://pypi.org/project/pyclipper/
 BuildRequires:	libstdc++-devel
